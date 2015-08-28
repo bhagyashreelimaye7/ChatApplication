@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reverse engineered SICSRChatApplication 2015.03.10 19-31-50-490">
+  <ClassDiagramComponents>
+    <Class xPosition="20.0" yPosition="20.0" package="" name="Application_Controller" visibility="public">
+      <Constructors>
+        <Constructor name="Application_Controller" visibility="public"/>
+        <Constructor name="Application_Controller" visibility="public">
+          <Argument type="String" name="email"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="c" visibility="package" type="Controller"/>
+        <Field name="email" visibility="package" type="String"/>
+        <Field name="updaterThread" visibility="package" type="Thread"/>
+        <Field name="r" visibility="package" type="Runnable"/>
+        <Field name="jButton1" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jLabel2" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jList1" visibility="private" type="javax.swing.JList"/>
+        <Field name="jPanel1" visibility="private" type="javax.swing.JPanel"/>
+        <Field name="jScrollPane1" visibility="private" type="javax.swing.JScrollPane"/>
+      </Fields>
+      <Methods>
+        <Method name="CreateMessage" visibility="public" returnType="void">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="chatload" visibility="public" returnType="void"/>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="jList1MouseClicked" visibility="private" returnType="void">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="20.0" package="" name="Chat" visibility="public">
+      <Constructors>
+        <Constructor name="Chat" visibility="public"/>
+        <Constructor name="Chat" visibility="public">
+          <Argument type="String" name="from"/>
+          <Argument type="String" name="to"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="from" visibility="package" type="String"/>
+        <Field name="c" visibility="package" type="Controller"/>
+        <Field name="jButton1" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jList1" visibility="private" type="javax.swing.JList"/>
+        <Field name="jScrollPane2" visibility="private" type="javax.swing.JScrollPane"/>
+        <Field name="jSeparator1" visibility="private" type="javax.swing.JSeparator"/>
+        <Field name="jTextField1" visibility="private" type="javax.swing.JTextField"/>
+        <Field name="r" visibility="package" type="Runnable"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="jButton1ActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="loadChat" visibility="public" returnType="void">
+          <Argument type="String" name="from"/>
+          <Argument type="String" name="to"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="20.0" package="" name="Controller" visibility="public">
+      <Constructors>
+        <Constructor name="Controller" visibility="public"/>
+        <Constructor name="Controller" visibility="public">
+          <Argument type="String" name="firstName"/>
+          <Argument type="String" name="lastName"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="firstName" visibility="package" type="String"/>
+        <Field name="u" visibility="package" type="User"/>
+        <Field name="rui" visibility="package" type="RegistrationUI"/>
+        <Field name="c" visibility="package" type="Chat"/>
+      </Fields>
+      <Methods>
+        <Method name="createUser" visibility="public" returnType="boolean">
+          <Argument type="String" name="firstName"/>
+          <Argument type="String" name="lastName"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="checkLogin" visibility="public" returnType="boolean">
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="Registration" visibility="public" returnType="void"/>
+        <Method name="getOnlineUsers" visibility="public" returnType="ResultSet">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="chatWith" visibility="public" returnType="void">
+          <Argument type="String" name="from"/>
+          <Argument type="String" name="to"/>
+        </Method>
+        <Method name="loadChat" visibility="public" returnType="ResultSet">
+          <Argument type="String" name="from"/>
+          <Argument type="String" name="to"/>
+        </Method>
+        <Method name="sendMessage" visibility="public" returnType="void">
+          <Argument type="String" name="from"/>
+          <Argument type="String" name="to"/>
+          <Argument type="String" name="sendmsg"/>
+        </Method>
+        <Method name="logout" visibility="public" returnType="boolean">
+          <Argument type="String" name="email"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="20.0" package="" name="LoginUI" visibility="public">
+      <Constructors>
+        <Constructor name="LoginUI" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="email" visibility="package" type="String"/>
+        <Field name="ac" visibility="package" type="Application_Controller"/>
+        <Field name="c" visibility="package" type="Controller"/>
+        <Field name="jButton1" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jButton2" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jLabel2" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jLabel3" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jLabel4" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jPanel1" visibility="private" type="javax.swing.JPanel"/>
+        <Field name="jPasswordField1" visibility="private" type="javax.swing.JPasswordField"/>
+        <Field name="jTextField1" visibility="private" type="javax.swing.JTextField"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="jButton1ActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CreateMessage" visibility="public" returnType="void">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="420.0" package="" name="RegistrationUI" visibility="public">
+      <Constructors>
+        <Constructor name="RegistrationUI" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="firstName" visibility="package" type="String"/>
+        <Field name="ac" visibility="package" type="Application_Controller"/>
+        <Field name="jButton1" visibility="private" type="javax.swing.JButton"/>
+        <Field name="jLabel1" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jLabel2" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jLabel3" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jLabel4" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jLabel5" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jLabel6" visibility="private" type="javax.swing.JLabel"/>
+        <Field name="jPanel1" visibility="private" type="javax.swing.JPanel"/>
+        <Field name="jPasswordField1" visibility="private" type="javax.swing.JPasswordField"/>
+        <Field name="jPasswordField2" visibility="private" type="javax.swing.JPasswordField"/>
+        <Field name="jTextField1" visibility="private" type="javax.swing.JTextField"/>
+        <Field name="jTextField2" visibility="private" type="javax.swing.JTextField"/>
+        <Field name="jTextField3" visibility="private" type="javax.swing.JTextField"/>
+      </Fields>
+      <Methods>
+        <Method name="initComponents" visibility="private" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void"/>
+        <Method name="jButton1ActionPerformed" visibility="private" returnType="void">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="CreateMessage" visibility="public" returnType="void">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="420.0" package="" name="User" visibility="public">
+      <Constructors>
+        <Constructor name="User" visibility="public"/>
+        <Constructor name="User" visibility="public">
+          <Argument type="String" name="firstName"/>
+          <Argument type="String" name="lastName"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="firstName" visibility="package" type="String"/>
+        <Field name="con" visibility="package" type="Connection"/>
+        <Field name="st" visibility="package" type="Statement"/>
+        <Field name="rs" visibility="package" type="ResultSet"/>
+        <Field name="uname" visibility="package" type="String"/>
+        <Field name="pass" visibility="package" type="String"/>
+        <Field name="url" visibility="package" type="String"/>
+      </Fields>
+      <Methods>
+        <Method name="getConnection" visibility="public" returnType="void"/>
+        <Method name="createUser" visibility="public" returnType="boolean">
+          <Argument type="String" name="firstName"/>
+          <Argument type="String" name="lastName"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="encryptPassword" visibility="private" returnType="String" isStatic="true">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="byteToHex" visibility="private" returnType="String" isStatic="true">
+          <Argument type="byte[]" name="hash"/>
+        </Method>
+        <Method name="checkLogin" visibility="public" returnType="boolean">
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="getOnlineUsers" visibility="public" returnType="ResultSet">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="loadChat" visibility="public" returnType="ResultSet">
+          <Argument type="String" name="from"/>
+          <Argument type="String" name="to"/>
+        </Method>
+        <Method name="sendMessage" visibility="public" returnType="void">
+          <Argument type="String" name="from"/>
+          <Argument type="String" name="to"/>
+          <Argument type="String" name="sendmsg"/>
+        </Method>
+        <Method name="logout" visibility="public" returnType="boolean">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="closeConnection" visibility="public" returnType="void"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="rui" source="Controller" target="RegistrationUI" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="u" source="Controller" target="User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="Controller" target="Chat" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ac" source="LoginUI" target="Controller" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="LoginUI" target="Controller" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ac" source="RegistrationUI" target="Controller" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="Chat" target="Controller" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="Application_Controller" target="Controller" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
